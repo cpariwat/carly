@@ -21,4 +21,5 @@ end
 group :test do
   gem 'json_matchers'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'webmock'
 end
