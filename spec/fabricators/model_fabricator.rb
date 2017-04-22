@@ -1,5 +1,4 @@
 Fabricator(:model) do
-  name          "MyString"
-  model_slug    "MyString"
-  origanization nil
+  name       FFaker::Product.brand
+  model_slug FFaker::Internet.slug(Faker::Product.brand)
 end

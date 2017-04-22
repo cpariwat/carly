@@ -4,10 +4,9 @@ gem 'rails', '4.2.8'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
-gem 'fabrication'
-gem 'ffaker'
-
 group :development, :test do
+  gem 'fabrication'
+  gem 'ffaker'
   gem 'rspec-rails'
 end
 
@@ -16,3 +15,6 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'shoulda-matchers', '~> 3.1'
+end
