@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+organizations = Fabricate.times(5, :organization)
+models = Fabricate.times(10, :model, organization: organizations.sample)
+model_types = Fabricate.times(30, :model_type, model: models.sample)

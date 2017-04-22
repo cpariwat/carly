@@ -6,7 +6,7 @@ gem 'sqlite3'
 
 group :development, :test do
   gem 'fabrication'
-  gem 'ffaker'
+  gem 'faker'
   gem 'rspec-rails'
 end
 

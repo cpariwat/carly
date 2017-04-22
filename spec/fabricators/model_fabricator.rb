@@ -1,4 +1,4 @@
 Fabricator(:model) do
-  name       { FFaker::Product.brand }
-  model_slug { FFaker::Internet.slug(FFaker::Product.brand) }
+  name       { Faker::Vehicle.manufacture }
+  model_slug { Faker::Vehicle.unique.manufacture.parameterize('_') }
 end
