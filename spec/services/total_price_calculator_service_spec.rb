@@ -7,7 +7,7 @@ RSpec.describe TotalPriceCalculatorService, type: :service do
     context 'with flexible pricing policy' do
       before do
         # fixture file has 50 'a'
-        stub_request(:get, "http://reuters.com")
+        stub_request(:get, 'http://reuters.com')
             .to_return(body: File.open(File.join(Rails.root, '/spec/fixtures/files/reuters.html')))
       end
 
@@ -24,7 +24,7 @@ RSpec.describe TotalPriceCalculatorService, type: :service do
     context 'with fixed pricing policy' do
       before do
         # fixture file has 8 'status'
-        stub_request(:get, "https://developer.github.com/v3/")
+        stub_request(:get, 'https://developer.github.com/v3/')
             .to_return(body: File.open(File.join(Rails.root, '/spec/fixtures/files/github-http-redirect.html')))
 
       end
@@ -40,7 +40,7 @@ RSpec.describe TotalPriceCalculatorService, type: :service do
     context 'with prestige pricing policy' do
       before do
         # fixture file has 51 pubDate elements
-        stub_request(:get, "http://www.yourlocalguardian.co.uk/sport/rugby/rss/")
+        stub_request(:get, 'http://www.yourlocalguardian.co.uk/sport/rugby/rss/')
             .to_return(body: File.open(File.join(Rails.root, '/spec/fixtures/files/yourlocalguardian.rss')))
       end
 
