@@ -24,7 +24,7 @@ RSpec.describe TotalPriceCalculatorService, type: :service do
     context 'with fixed pricing policy' do
       before do
         # fixture file has 8 'status'
-        stub_request(:get, "https://developer.github.com/v3/#http-redirects")
+        stub_request(:get, "https://developer.github.com/v3/")
             .to_return(body: File.open(File.join(Rails.root, '/spec/fixtures/files/github-http-redirect.html')))
 
       end
@@ -41,7 +41,7 @@ RSpec.describe TotalPriceCalculatorService, type: :service do
       before do
         # fixture file has 51 pubDate elements
         stub_request(:get, "http://www.yourlocalguardian.co.uk/sport/rugby/rss/")
-            .to_return(body: File.open(File.join(Rails.root, '/spec/fixtures/files/reuters.html')))
+            .to_return(body: File.open(File.join(Rails.root, '/spec/fixtures/files/yourlocalguardian.rss')))
       end
 
       it 'calculates total price base on how many pubDate elements found on yourlocalguardian feed' do
