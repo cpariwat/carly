@@ -16,7 +16,8 @@ RSpec.describe Model, type: :model do
     it { is_expected.to validate_uniqueness_of :model_slug }
   end
 
-  describe 'Association' do
+  describe 'Associations' do
     it { is_expected.to belong_to :organization }
+    it { is_expected.to have_many :model_type }
   end
 end

@@ -1,7 +1,6 @@
 Fabricator(:model_type) do
-  name            "MyString"
-  model_type_slug ""
-  model_type_code "MyString"
-  base_price      1
-  model           nil
+  name            FFaker::Product.product_name
+  model_type_slug FFaker::Internet.slug(FFaker::Product.product_name)
+  model_type_code FFaker::Product.model
+  base_price      Random.rand(10_000...100_000)
 end
