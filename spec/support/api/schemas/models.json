@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "required": ["models"],
+  "properties": {
+    "models": {
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "model_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "total_price": { "type": "integer" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

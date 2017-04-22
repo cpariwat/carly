@@ -35,6 +35,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.5.1)
+      public_suffix (~> 2.0, >= 2.0.2)
     arel (6.0.4)
     builder (3.2.3)
     concurrent-ruby (1.0.5)
@@ -46,6 +48,10 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.1)
+    json-schema (2.8.0)
+      addressable (>= 2.4)
+    json_matchers (0.7.0)
+      json-schema (~> 2.7)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -57,6 +63,7 @@ GEM
     minitest (5.10.1)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
+    public_suffix (2.0.5)
     rack (1.6.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -125,6 +132,7 @@ PLATFORMS
 DEPENDENCIES
   fabrication
   faker
+  json_matchers
   rails (= 4.2.8)
   rspec-rails
   shoulda-matchers (~> 3.1)
