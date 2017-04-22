@@ -5,9 +5,12 @@ RSpec.describe ModelsController, type: :controller do
   let(:model_types) { Fabricate.times(3, :model_type) }
   let(:model) { Fabricate(:model, organization: organization, model_types: model_types) }
 
-  describe 'GET #index' do
-    it 'returns http success' do
+  describe 'GET #model_types' do
+    before do
       get :model_types, model_slug: model.model_slug
+    end
+
+    it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
 
