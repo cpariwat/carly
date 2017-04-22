@@ -10,6 +10,6 @@ RSpec.describe Organization, type: :model do
   end
 
   describe 'Associations' do
-    it { is_expected.to have_many :model }
+    it { is_expected.to have_many :models }
   end
 end

@@ -1,3 +1,3 @@
 class Model < ActiveRecord::Base
-  belongs_to :origanization
+  belongs_to :organization
 end
