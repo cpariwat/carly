@@ -142,6 +142,7 @@ DEPENDENCIES
   fabrication
   faker
   json_matchers
+  nokogiri
   rails (= 4.2.8)
   rspec-rails
   shoulda-matchers (~> 3.1)
