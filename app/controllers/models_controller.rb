@@ -1,5 +1,6 @@
 class ModelsController < ApplicationController
   def model_types
-    render json: Model.find_by(model_slug: params[:model_slug])
+    car_models = Model.where(model_slug: params[:model_slug])
+    render json: car_models
   end
 end

@@ -5,12 +5,14 @@
     "models": {
       "items": {
         "type": "object",
+        "required": ["name", "model_types"],
         "properties": {
           "name": { "type": "string" },
           "model_types": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": ["name", "total_price"],
               "properties": {
                 "name": { "type": "string" },
                 "total_price": { "type": "integer" }
