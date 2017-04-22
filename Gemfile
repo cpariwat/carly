@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.8'
+
+gem 'active_model_serializers'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
