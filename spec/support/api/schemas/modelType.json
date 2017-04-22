@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "required": ["model_type"],
+  "properties": {
+    "model_type": {
+      "type": "object",
+      "required": ["name", "total_price"],
+      "properties": {
+        "base_price": {  "type": "integer" },
+        "name": { "type": "string"  },
+        "total_price": { "type": "integer" }
+      }
+    }
+  }
+}
