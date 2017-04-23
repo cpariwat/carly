@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe ModelType, type: :model do
-  subject { Fabricate(:model_type) }
+  let(:organization) { Fabricate(:organization) }
+  let(:model) { Fabricate(:model, organization: organization) }
+  subject { Fabricate(:model_type, model: model) }
 
   describe 'Validations' do
     it 'is valid with valid attributes' do
