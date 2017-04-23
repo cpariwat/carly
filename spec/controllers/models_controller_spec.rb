@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ModelsController, type: :controller do
+RSpec.describe Api::V1::ModelsController, type: :controller do
   let(:organization) { Fabricate(:organization) }
   let(:model_types) { Fabricate.times(3, :model_type) }
   let(:model) { Fabricate(:model, organization: organization, model_types: model_types) }

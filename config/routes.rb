@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
   use_doorkeeper
 
-  # get 'models/:model_slug/model_types' => 'models#model_types'
-
-  resource :models, only: [] do
-    get :model_types, path: '/:model_slug/model_types'
-  end
+  get 'models/:model_slug/model_types' => 'api/v1/models#model_types'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
