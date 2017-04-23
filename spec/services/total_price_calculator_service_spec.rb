@@ -5,18 +5,11 @@ RSpec.describe TotalPriceCalculatorService, type: :service do
     let(:base_price) { 10000 }
 
     context 'with flexible pricing policy' do
-      before do
-        # fixture file has 50 'a'
-        stub_request(:get, 'http://reuters.com')
-            .to_return(body: File.open(File.join(Rails.root, '/spec/fixtures/files/reuters.html')))
-      end
-
       it 'calculate total price base on how many letter a found on http://reuters.com' do
         # letters 'a' count divided by 100
         expected_margin = 50 / 100.00
-        policy = Organization.pricing_policies[:flexible]
 
-        total_price = TotalPriceCalculatorService.new(base_price,policy).calculate
+        total_price = TotalPriceCalculatorService.new(base_price,'flexible').calculate
         expect(total_price).to eq base_price * expected_margin
       end
     end
@@ -30,9 +23,8 @@ RSpec.describe TotalPriceCalculatorService, type: :service do
       end
       it 'calculates total price base on  how many words status found on github documentation' do
         expected_margin = 8
-        policy = Organization.pricing_policies[:fixed]
 
-        total_price = TotalPriceCalculatorService.new(base_price,policy).calculate
+        total_price = TotalPriceCalculatorService.new(base_price,'fixed').calculate
         expect(total_price).to eq base_price + expected_margin
       end
     end
@@ -46,9 +38,8 @@ RSpec.describe TotalPriceCalculatorService, type: :service do
 
       it 'calculates total price base on how many pubDate elements found on yourlocalguardian feed' do
         expected_margin = 51
-        policy = Organization.pricing_policies[:prestige]
 
-        total_price = TotalPriceCalculatorService.new(base_price,policy).calculate
+        total_price = TotalPriceCalculatorService.new(base_price,'prestige').calculate
         expect(total_price).to eq base_price + expected_margin
       end
     end
