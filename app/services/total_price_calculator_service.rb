@@ -19,7 +19,7 @@ class TotalPriceCalculatorService
                     else
                       0
                   end
-    total_price
+    total_price.floor
   end
 
   private
