@@ -15,7 +15,7 @@
               "required": ["name", "total_price"],
               "properties": {
                 "name": { "type": "string" },
-                "total_price": { "type": "integer" }
+                "total_price": { "type": "number" }
               }
             }
           }
