@@ -11,3 +11,5 @@ organizations = Fabricate.times(10, :organization)
 # Don't use Fabricate.times as it will do the sampling only once
 models = Array.new(20) { Fabricate(:model, organization: organizations.sample) }
 model_types = Array.new(30) { Fabricate(:model_type, model: models.sample) }
+
+Fabricate(:user, email: 'cpariwat@me.com', password: '12345678')
