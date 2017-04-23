@@ -4,6 +4,7 @@ gem 'rails', '4.2.8'
 
 gem 'active_model_serializers'
 gem 'devise'
+gem 'doorkeeper'
 gem 'nokogiri'
 gem 'sqlite3'
 
