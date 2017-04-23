@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   use_doorkeeper
 
   get 'models/:model_slug/model_types' => 'api/v1/models#model_types'
-  post 'models/:model_slug/model_types_price/:model_type_slug' => 'api/v1/mmodel_types#model_types_price'
+  post 'models/:model_slug/model_types_price/:model_type_slug' => 'api/v1/model_types#model_types_price'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
