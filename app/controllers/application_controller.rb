@@ -4,4 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
 
   before_action :doorkeeper_authorize!
+
+  rescue_from  ActionController::ParameterMissing, with: :render_error_message
+  rescue_from  ActiveRecord::RecordNotFound, with: :render_error_message
+
+  def render_error_message(error)
+    render json: {status: 'error', message: error.message}
+  end
 end
