@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class MarkupCounter
   def count_pattern_on_webpage(regex, on_url)
     count = 0

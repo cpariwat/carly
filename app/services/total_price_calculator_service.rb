@@ -10,11 +10,11 @@ class TotalPriceCalculatorService
 
   def calculate
     total_price = case @pricing_policy
-                    when Organization.pricing_policies[:flexible]
+                    when 'flexible'
                       @base_price * flexible_margin
-                    when Organization.pricing_policies[:fixed]
+                    when 'fixed'
                       @base_price + fixed_margin
-                    when Organization.pricing_policies[:prestige]
+                    when 'prestige'
                       @base_price + prestige_margin
                     else
                       0

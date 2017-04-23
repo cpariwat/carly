@@ -3,7 +3,10 @@ class ModelType < ActiveRecord::Base
 
   validates :model_type_slug, presence: true, uniqueness: true
 
+  delegate :organization, to: :model, allow_nil: true
+
   def total_price
-    # TODO: Calculate total price from base price
+    total_price_calculator = TotalPriceCalculatorService.new(base_price, organization.pricing_policy)
+    total_price_calculator.calculate
   end
 end
