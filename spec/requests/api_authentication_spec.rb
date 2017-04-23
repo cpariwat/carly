@@ -13,6 +13,6 @@ describe 'API authentication' , type: :request do
   it 'can get token with valid user email and password' do
     user = Fabricate(:user, password: '12345678')
     post "/oauth/token", {grant_type: "password", email: user.email, password: '12345678'}
-    expect(respond['token']).to_not be_nil
+    expect(JSON.parse(response.body)['access_token']).to_not be_nil
   end
 end
