@@ -3,8 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.8'
 
 gem 'active_model_serializers'
+gem 'devise'
+gem 'doorkeeper'
 gem 'nokogiri'
-# Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
 group :development, :test do

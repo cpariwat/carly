@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  #
+  use_doorkeeper
+
   # get 'models/:model_slug/model_types' => 'models#model_types'
 
   resource :models, only: [] do

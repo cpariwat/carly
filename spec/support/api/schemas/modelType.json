@@ -6,9 +6,9 @@
       "type": "object",
       "required": ["name", "total_price"],
       "properties": {
-        "base_price": {  "type": "integer" },
+        "base_price": {  "type": "number" },
         "name": { "type": "string"  },
-        "total_price": { "type": "integer" }
+        "total_price": { "type": "number" }
       }
     }
   }
