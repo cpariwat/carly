@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   #
   # get 'models/:model_slug/model_types' => 'models#model_types'
 
