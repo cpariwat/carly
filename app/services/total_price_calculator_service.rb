@@ -17,7 +17,7 @@ class TotalPriceCalculatorService
                     when 'prestige'
                       @base_price + prestige_margin
                     else
-                      0
+                      raise Errors::ServicesExceptions::PolicyNotFoundException, 'Policy not found'
                   end
     total_price.floor
   end
