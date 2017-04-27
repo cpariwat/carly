@@ -1,3 +1,3 @@
 class ModelTypeSerializer < ActiveModel::Serializer
-  attributes :name, :total_price
+  attributes :name, :base_price, :total_price
 end
